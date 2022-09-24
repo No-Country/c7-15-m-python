@@ -27,21 +27,32 @@ SECRET_KEY = 'django-insecure-3xbuekn@(rv=@h^eingts1v##j%u=3-7y@rinv8x7hcc58*j@q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
+
+AUTH_USER_MODEL = 'users.User'
 
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
+
+LOCAL_APPS = [
     'users',
     'recipes',
 ]
+
+THIRD_PARTY_APPS = [
+    'rest_framework',
+]
+
+INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -58,7 +69,7 @@ ROOT_URLCONF = 'Kecomer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(SETTINGS_PATH, 'templates')],
+        'DIRS': [ ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,15 +89,22 @@ WSGI_APPLICATION = 'Kecomer.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Kecomer',
-        'USER': 'postgres',
-        'PASSWORD': 'dipa1983',
-        'HOST': '127.0.0.1',
-        'PORT': 5432
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'Kecomer',
+#         'USER': 'postgres',
+#         'PASSWORD': 'holamundo',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#         'ATOMIC_REQUESTS': True
+#         }
+#     }
+
 
 
 # Password validation
@@ -125,11 +143,11 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'

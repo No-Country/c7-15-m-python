@@ -12,20 +12,29 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+
 SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3xbuekn@(rv=@h^eingts1v##j%u=3-7y@rinv8x7hcc58*j@q'
+env = environ.Env()
+
+# read th .env file
+environ.Env.read_env(env_file=str(BASE_DIR) + '/.env')
+
+SECRET_KEY = env('SECRET_KEY')
+
+DEBUG = env('DEBUG')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = ['*',]
 
@@ -89,21 +98,16 @@ WSGI_APPLICATION = 'Kecomer.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env('POSTGRESQL_NAME'),
+        'USER': env('POSTGRESQL_USER'),
+        'PASSWORD': env('POSTGRESQL_PASS'),
+        'HOST': env('POSTGRESQL_HOST'),
+        'PORT': env('POSTGRESQL_PORT'),
+        'ATOMIC_REQUESTS': env('POSTGRESQL_ATOMIC_REQUESTS'),
     }
 }
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'Kecomer',
-#         'USER': 'postgres',
-#         'PASSWORD': 'holamundo',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#         'ATOMIC_REQUESTS': True
-#         }
-#     }
 
 
 

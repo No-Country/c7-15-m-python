@@ -11,10 +11,14 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from Kecomer import db
 import os
 import environ
 
-SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,13 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-env = environ.Env()
-
-# read th .env file
-environ.Env.read_env(env_file=str(BASE_DIR) + '/.env')
-
 SECRET_KEY = env('SECRET_KEY')
 
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -97,18 +97,7 @@ WSGI_APPLICATION = 'Kecomer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env('POSTGRESQL_NAME'),
-        'USER': env('POSTGRESQL_USER'),
-        'PASSWORD': env('POSTGRESQL_PASS'),
-        'HOST': env('POSTGRESQL_HOST'),
-        'PORT': env('POSTGRESQL_PORT'),
-        'ATOMIC_REQUESTS': env('POSTGRESQL_ATOMIC_REQUESTS'),
-    }
-}
-
+DATABASES = db.POSTGRESQL
 
 
 # Password validation

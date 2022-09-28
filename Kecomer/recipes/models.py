@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 
 # Create your models here.
@@ -8,24 +9,29 @@ class RecipesModel(models.Model):
         ('D', 'Dinner')
     ]
     category_choice=[
-        ('V','vegana')
-        ('C', 'Carnes')
-        ('P','Postres')
-        ('S', 'SinTacc')
+        ('V','vegana'),
+        ('C', 'Carnes'),
+        ('P','Postres'),
+        ('S', 'SinTacc'),
         ('PA', 'Pastas')
     ]
     title=models.CharField(max_length=255, unique=True)
     image=models.ImageField(upload_to="recipes/img", blank=True, null=True)
     link_video=models.CharField(max_length=255, blank=True, null=True)
-    category=models.CharField(choices=category_choice)
+    category=models.CharField(max_length=12, choices=category_choice)
     number_of_dishes=models.IntegerField(max_length=1)
-    timeday= models.CharField(choices=time_choice, null=True, blank=True)
+    timeday= models.CharField(max_length=12,choices=time_choice, null=True, blank=True)
     recipes_time=models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
     def __str__(self):
         return self.title
+    class Meta:
+        verbose_name = 'Recipe'
+        verbose_name_plural = 'Recipes'
+        ordering = ['id']
+
 
 #Tabla ingredientes relacionada con RecipesModel para traer nombre de receta
 class Ingredients(models.Model):
@@ -35,10 +41,22 @@ class Ingredients(models.Model):
     dishe_4= models.CharField(max_length=255, blank=True, null=True)
     dishe_5= models.CharField(max_length=255, blank=True, null=True)
 
+    def __str__(self):
+        return f"ingrediente-> {self.dishe_1}"
+    class Meta:
+        verbose_name = 'Ingrediente'
+        verbose_name_plural = 'ingredientes'
+        ordering = ['id']
 class Favorites(models.Model):
     platillo=models.ForeignKey(RecipesModel,on_delete=models.CASCADE)
     ingredientes=models.ForeignKey(Ingredients, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return f"favorito-> {self.platillo}"
+    class Meta:
+        verbose_name = 'Favorito'
+        verbose_name_plural = 'Favoritos'
+        ordering = ['id']
 #class description(models.Model):
  #   name=models.ForeignKey(Ingredients, on_delete=models.CASCADE)
   #  count= models.CharField(max_length=255)

@@ -14,6 +14,7 @@ from pathlib import Path
 from Kecomer import db
 import os
 import environ
+from datetime import timedelta
 
 env = environ.Env(
     # set casting, default value
@@ -59,6 +60,7 @@ LOCAL_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
+    'djoser',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
@@ -74,6 +76,24 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Kecomer.urls'
+
+# config Djoser
+REST_FRAMEWORK = {
+    # al momento de ingresar datos repetidos, me diga error
+    'NON_FIELD_ERRORS_KEY': 'error',
+    # agregar depues de usar el JWT -- 1 jwt
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+SIMPLE_JWT = {
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    #https://django-rest-framework-simplejwt.readthedocs.io/en/latest/settings.html
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+}
+
 
 TEMPLATES = [
     {

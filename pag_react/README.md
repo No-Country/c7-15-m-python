@@ -1,3 +1,8 @@
+# Se armo estructura de carpetas
+    En assets estan los css, img, fonts y js
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

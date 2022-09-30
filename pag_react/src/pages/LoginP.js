@@ -20,7 +20,7 @@ export default function LoginP() {
                         <div>
                             <h1 className="hero_title layout">Iniciar sesión</h1>
                             <div>
-                                <h3 className="highlights layout">¿No tenés cuenta?  <Link to="/creacuenta" classNameName="crea_cuenta">  Crear cuenta</Link></h3>
+                                <h3 className="highlights layout">¿No tenés cuenta?  <Link to="/creacuenta" className="crea_cuenta">  Crear cuenta</Link></h3>
                             <div>
                         </div>
 

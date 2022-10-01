@@ -1,8 +1,8 @@
-import React from 'react'
+import React, {} from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import LoginP from './LoginP'
-import CrearCuenta from "./CrearCuenta"
-import Home from "./home/Home"
+import LoginP from '../LoginP'
+import CrearCuenta from '../CrearCuenta'
+import Home from "../home/Home"
 
 export default function RouterPage() {
   return (

@@ -7,10 +7,11 @@
 <<<<<<< HEAD
 .gitignore
 db.sqlite3
+dipa/
 =======
 >>>>>>> fa27a0f40238906a551fe5ff97607e276391b6d4
 .idea/
-dipa/
+../dipa/
 ../recetasenv/
 # User-specific stuff
 .idea/**/workspace.xml

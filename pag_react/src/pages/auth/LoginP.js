@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import Cookies from 'universal-cookie'
-import Home from './home/Home';
+import Home from '../home/Home';
 
 const baseUrl="http://localhost:3001/usuarios";
 const cookies = new Cookies();
@@ -54,7 +54,6 @@ function LoginP(){
 
   return (
     <React.Fragment>
-    { miLogin === false ? 
         <div className="flex layout">
             <div className="block14 layout">
                 <div className="block15 layout">
@@ -115,10 +114,6 @@ function LoginP(){
                 </div>
             </div>
         </div>
-    
-    : 
-    window.location = '/home'
-    }
     </React.Fragment>
   )
 }

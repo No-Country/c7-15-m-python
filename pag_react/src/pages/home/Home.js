@@ -7,29 +7,31 @@ export default function Home() {
             <div>
                 <header>
                 <nav>
-                    <div class="logo">
-                        <img src="./asset/image/imagenLogo.svg" />
-                        <h1>KE COMER</h1>
-                    </div>
+                    
+                    <div className="block15__item">
+                        <Link to="/home"><img src="../assets/img/KeComer.png" alt="" className="icon1 layout" /><h3 className="highlights3 layout">KE COMER</h3></Link>
+                        
+                   </div>
+                    
                     <div class="url">
                         <ul>
                             <li>
-                                <label for="carnes">Carnes <img src="./asset/image/flecha-abajo.svg" /></label>
+                                <label for="carnes">Carnes <img src="../assets/img/flecha-abajo.svg" /></label>
                             </li>
                             <li>
-                                <label for="vegetales">Vegetales <img src="./asset/image/flecha-abajo.svg" /></label>
+                                <label for="vegetales">Vegetales <img src="../assets/img/flecha-abajo.svg" /></label>
                             </li>
                             <li>
-                                <label for="condimientos">Codimentos <img src="./asset/image/flecha-abajo.svg" /></label>
+                                <label for="condimientos">Codimentos <img src="../assets/img/flecha-abajo.svg" /></label>
                             </li>
                             <li>
-                                <label for="categoria">Mas Categorias <img src="./asset/image/flecha-abajo.svg" /></label>
+                                <label for="categoria">Mas Categorias <img src="../assets/img/flecha-abajo.svg" /></label>
                             </li>
                         </ul>
                     </div>
                     <div class="btn">
-                        <a href="../login/web/login.html"><button class="btn1">Ingresar</button></a>
-                        <a href="../login/web/crear_cuenta.html"><button class="btn2">Crea tu Cuenta</button></a>
+                        <Link to="/"><button class="btn1">Ingresar</button></Link>
+                        <Link to="/creacuenta"><button class="btn2">Crea tu Cuenta</button></Link>
                     </div>
                 </nav>
             </header>
@@ -39,44 +41,44 @@ export default function Home() {
                 </p>
                 <div class="category">
                     <div class="divCategory">
-                        <img src="./asset/image/carnes.png" />
+                        <img src="../assets/img/carnes.png" />
                         <span>Carnes</span>
                     </div>
                     <div class="divCategory">
-                        <img src="./asset/image/verduras.png" />
+                        <img src="../assets/img/verduras.png" />
                         <span>Vegetales</span>
                     </div>
                     <div class="divCategory">
-                        <img src="./asset/image/frutas.png" />
+                        <img src="../assets/img/frutas.png" />
                         <span>Frutas</span>
                     </div>
                     <div class="divCategory">
-                        <img src="./asset/image/lacteos.png" />
+                        <img src="../assets/img/lacteos.png" />
                         <span>Lateos</span>
                     </div>
                     <div class="divCategory">
-                        <img src="./asset/image/especias.png" />
+                        <img src="../assets/img/especias.png" />
                         <span>Condimentos</span>
                     </div>
                     <div class="divCategory">
-                        <img src="./asset/image/bebidas.png" />
+                        <img src="../assets/img/bebidas.png" />
                         <span>Bebidas</span>
                     </div>
                     <div class="divCategory">
-                        <img src="./asset/image/harinas-y-granos.png" />
+                        <img src="../assets/img/harinas-y-granos.png" />
                         <span>Harinas y granos</span>
                     </div>
                     <div class="divCategory">
-                        <img src="./asset/image/grasas.png" />
+                        <img src="../assets/img/grasas.png" />
                         <span>Grasas y aceites</span>
                     </div>
                 </div>
                 <div class="barraBusqueda">
                     <div class="input">
-                        <img src="./asset/image/lupa.svg" />
+                        <img src="../assets/img/lupa.svg" />
                         <input type="text" placeholder="Ingresar ingredientes" />
                     </div>
-                    <a href="#"><button class="btn3"><img src="./asset/image/mas0112483-jv7a.svg" />
+                    <a href="#"><button class="btn3"><img src="../assets/img/mas0112483-jv7a.svg" />
                             Agregar</button></a>
                     <a href="#"><button class="btn4">Buscar receta</button></a>
                 </div>

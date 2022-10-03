@@ -14,6 +14,6 @@ class ClientViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UsersSerializers
 
-    
+#class RecipesViewset
 
     

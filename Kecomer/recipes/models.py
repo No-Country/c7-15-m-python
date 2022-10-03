@@ -1,6 +1,22 @@
 from tabnanny import verbose
 from django.db import models
 
+
+#Tabla ingredientes relacionada con RecipesModel para traer nombre de receta
+class Ingredients(models.Model):
+    dishe_1= models.CharField(max_length=255)
+    dishe_2= models.CharField(max_length=255, blank=True, null=True)
+    dishe_3= models.CharField(max_length=255, blank=True, null=True)
+    dishe_4= models.CharField(max_length=255, blank=True, null=True)
+    dishe_5= models.CharField(max_length=255, blank=True, null=True)
+
+    def __str__(self):
+        return f"ingrediente-> {self.dishe_1}"
+    class Meta:
+        verbose_name = 'Ingrediente'
+        verbose_name_plural = 'ingredientes'
+        ordering = ['id']
+
 # Create your models here.
 class RecipesModel(models.Model):
     time_choice = [
@@ -22,6 +38,9 @@ class RecipesModel(models.Model):
     number_of_dishes=models.IntegerField(max_length=1)
     timeday= models.CharField(max_length=12,choices=time_choice, null=True, blank=True)
     recipes_time=models.IntegerField()
+    ingredients=models.ManyToManyField(Ingredients)
+    like=models.IntegerField(default=0, null=True, blank=True)
+    description=models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -33,20 +52,7 @@ class RecipesModel(models.Model):
         ordering = ['id']
 
 
-#Tabla ingredientes relacionada con RecipesModel para traer nombre de receta
-class Ingredients(models.Model):
-    dishe_1= models.CharField(max_length=255)
-    dishe_2= models.CharField(max_length=255, blank=True, null=True)
-    dishe_3= models.CharField(max_length=255, blank=True, null=True)
-    dishe_4= models.CharField(max_length=255, blank=True, null=True)
-    dishe_5= models.CharField(max_length=255, blank=True, null=True)
 
-    def __str__(self):
-        return f"ingrediente-> {self.dishe_1}"
-    class Meta:
-        verbose_name = 'Ingrediente'
-        verbose_name_plural = 'ingredientes'
-        ordering = ['id']
 class Favorites(models.Model):
     platillo=models.ForeignKey(RecipesModel,on_delete=models.CASCADE)
     ingredientes=models.ForeignKey(Ingredients, on_delete=models.CASCADE)
@@ -57,8 +63,6 @@ class Favorites(models.Model):
         verbose_name = 'Favorito'
         verbose_name_plural = 'Favoritos'
         ordering = ['id']
-#class description(models.Model):
- #   name=models.ForeignKey(Ingredients, on_delete=models.CASCADE)
-  #  count= models.CharField(max_length=255)
-   # unit=  models.CharField(max_length=255)
+        
+
 

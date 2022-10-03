@@ -29,7 +29,7 @@ $python manage.py runserver
 | *POST* | ```/auth/jwt/create/``` | _Login user_|_All users_|
 | *POST* | ```/auth/jwt/refresh/``` | _Refresh the access token_|_All users_|
 | *POST* | ```/auth/jwt/verify/``` | _Verify the validity of a token_|_All users_|
-| *GET* | ```/api/user/``` | All users_|_All users_|
+| *GET* | ```/api/user/``` | _All users_|_All users_|
 | *GET* | ```/api/user/{user_id}/``` | _Retrieve an user_|_All users_|
 | *PUT* | ```/api/user/{user_id}/``` | _Update an user_|_All users_|
 

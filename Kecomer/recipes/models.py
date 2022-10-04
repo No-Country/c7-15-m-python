@@ -34,7 +34,7 @@ class RecipesModel(models.Model):
     image=models.ImageField(upload_to="recipes/img", blank=True, null=True)
     link_video=models.CharField(max_length=255, blank=True, null=True)
     category=models.CharField(max_length=12, choices=category_choice)
-    number_of_dishes=models.IntegerField(max_length=1)
+    number_of_dishes=models.IntegerField()
     timeday= models.CharField(max_length=12,choices=time_choice, null=True, blank=True)
     recipes_time=models.IntegerField()
     ingredients=models.ManyToManyField(Ingredients)

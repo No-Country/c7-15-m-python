@@ -1,5 +1,3 @@
-from collections import UserList
-from users.genericviews import ClientViewSet
 from django.urls import path
 from users.views import UserCreateView
 from users.customuser import *

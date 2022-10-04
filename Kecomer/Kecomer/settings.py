@@ -117,7 +117,7 @@ WSGI_APPLICATION = 'Kecomer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = db.SQLITE
+DATABASES = db.POSTGRESQL
 
 
 # Password validation

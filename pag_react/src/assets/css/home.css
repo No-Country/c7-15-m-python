@@ -177,3 +177,16 @@ main p span {
   align-items: center;
   gap: 1rem;
 }
+
+
+.highlights3 {
+  font: 700 16px/1.2 "Inter", Helvetica, Arial, serif;
+  color: #e20a4b;
+  letter-spacing: 0px;
+  text-decoration: none;
+  width: 50%;
+}
+
+.espacio {
+  margin: 10px;
+}

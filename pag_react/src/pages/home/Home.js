@@ -9,7 +9,7 @@ export default function Home() {
                 <nav>
                     
                     <div className="block15__item">
-                        <Link to="/home"><img src="../assets/img/KeComer.png" alt="" className="icon1 layout" /><h3 className="highlights3 layout">KE COMER</h3></Link>
+                        <Link to="/"><img src="../assets/img/KeComer.png" alt="" className="icon1 layout" /><h3 className="highlights3 layout">KE COMER</h3></Link>
                         
                    </div>
                     
@@ -30,8 +30,9 @@ export default function Home() {
                         </ul>
                     </div>
                     <div class="btn">
-                        <Link to="/"><button class="btn1">Ingresar</button></Link>
+                        <Link to="/login"><button class="btn1">Ingresar</button></Link>
                         <Link to="/creacuenta"><button class="btn2">Crea tu Cuenta</button></Link>
+                        <Link to="/apiconsume"><button class="btn3">Api</button></Link>
                     </div>
                 </nav>
             </header>

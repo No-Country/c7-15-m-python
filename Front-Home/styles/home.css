@@ -36,6 +36,10 @@ a {
   color: #e20a4b;
 }
 
+.logo h2 {
+  color: #e20a4b;
+}
+
 .url {
   display: flex;
   align-items: center;
@@ -113,7 +117,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 0 1in;
+  padding: 0 3.5in;
   align-items: center;
 }
 
@@ -136,6 +140,7 @@ main p span {
 
 .category {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -176,4 +181,28 @@ main p span {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 130px;
+  gap: 14px;
+  width: 100%;
+  height: 270px;
+  background: #f7f7f7;
+  border-top: 1px solid #e6e6e6;
+  margin-top: 200px;
+  justify-content: space-between;
+} 
+
+.listFooter{
+  display: flex;
+  width: 50vw;
+  justify-content: space-between;
+}
+
+.listFooter ul span {
+  font-weight: bold;
 }

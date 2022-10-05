@@ -8,7 +8,7 @@ export default function CrearCuenta() {
                         <div className="block14 layout">
                             <div className="block15 layout">
                                 <div className="block15__item">
-                                    <a href="#"><img src="../assets/img/KeComer.png" alt="" className="icon1 layout" /></a>
+                                    <Link to="/" className="crea_cuenta"><img src="../assets/img/KeComer.png" alt="" className="icon1 layout" /></Link>
                                 </div>
                                 <div className="spacer block15__spacer"></div>
                                 <h5 className="highlights3 layout">KE COMER</h5>
@@ -20,7 +20,7 @@ export default function CrearCuenta() {
                                     <div>
                                         <h1 className="hero_title layout">Crear Cuenta</h1>
                                         <div>
-                                            <h3 className="highlights layout">¿Ya tenés cuenta?  <Link to="/" className="crea_cuenta"> Iniciar sesión</Link></h3>
+                                            <h3 className="highlights layout">¿Ya tenés cuenta?  <Link to="/login" className="crea_cuenta"> Iniciar sesión</Link></h3>
                                         <div>
                                     </div>
 

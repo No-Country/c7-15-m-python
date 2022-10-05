@@ -58,10 +58,8 @@ function LoginP(){
             <div className="block14 layout">
                 <div className="block15 layout">
                     <div className="block15__item">
-                        <Link to="/"><img src="../assets/img/KeComer.png" alt="" className="icon1 layout" /></Link>
+                      <Link to="/"><img src="../assets/img/logoPpal.png" alt="" /></Link>
                     </div>
-                    <div className="spacer block15__spacer"></div>
-                    <h5 className="highlights3 layout">KE COMER</h5>
                 </div>
             </div>
             <div className="block1 layout">

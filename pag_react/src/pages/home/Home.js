@@ -9,7 +9,7 @@ export default function Home() {
                 <nav>
                     
                     <div className="block15__item">
-                        <Link to="/"><img src="../assets/img/KeComer.png" alt="" width="50px" /><h3 className="highlights3 layout">KE COMER</h3></Link>
+                        <Link to="/"><img src="../assets/img/logoPpal.png" alt="" /></Link>
                         
                    </div>
                     

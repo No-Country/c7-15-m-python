@@ -58,7 +58,7 @@ function LoginP(){
             <div className="block14 layout">
                 <div className="block15 layout">
                     <div className="block15__item">
-                        <Link to="/home"><img src="../assets/img/KeComer.png" alt="" className="icon1 layout" /></Link>
+                        <Link to="/"><img src="../assets/img/KeComer.png" alt="" className="icon1 layout" /></Link>
                     </div>
                     <div className="spacer block15__spacer"></div>
                     <h5 className="highlights3 layout">KE COMER</h5>

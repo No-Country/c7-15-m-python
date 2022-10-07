@@ -4,7 +4,15 @@
 ### PyCharm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+<<<<<<< HEAD
+.gitignore
+db.sqlite3
+dipa/
+=======
+>>>>>>> fa27a0f40238906a551fe5ff97607e276391b6d4
 .idea/
+../dipa/
+../recetasenv/
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml

@@ -4,6 +4,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
 from django.urls import path, include, re_path
+from django.views.static import serve
 
 schema_view = get_schema_view(
    openapi.Info(

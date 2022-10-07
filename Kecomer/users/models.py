@@ -12,21 +12,21 @@ class User(AbstractUser):
 
     username = models.CharField(max_length=25, unique=False)
     email = models.EmailField(max_length=80, unique=True)
-    avatar = models.ImageField(upload_to='user/users', null=True, blank=True)
-    date_of_birth = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    avatar = models.ImageField(default="no-avatar.jpg", upload_to='user/users', null=True, blank=True)
+    date_of_birth = models.DateTimeField(null=True, blank=True)
     genre = models.CharField(choices=genre_choice, null=True, blank=True, max_length=4)
     country = models.CharField(max_length=100, null=True, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    is_active  =  models.BooleanField (default = True)
-    is_admin  =  models.BooleanField (default = False)
+    is_active = models.BooleanField (default = True)
+    is_admin = models.BooleanField (default = False)
 
-    objetos  =  MyUserManager()
+    objetos = MyUserManager()
 
-    USERNAME_FIELD  =  'email'
-    REQUIRED_FIELDS  = [ 'username' ]
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username']
 
     def  __str__ (self):
         return self.email

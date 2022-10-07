@@ -2,6 +2,7 @@ from pathlib import Path
 
 import environ
 import os
+import dj_database_url
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -11,9 +12,6 @@ env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False)
 )
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 SQLITE = {
     'default': {
@@ -34,3 +32,9 @@ POSTGRESQL = {
         'ATOMIC_REQUESTS': True
     }
 }
+#configuracion para la nube
+#DBONRENDER={
+#    'default': dj_database_url.config(
+#        default='sqlite///db.sqlite3',
+#        conn_max_age=600)
+#        }

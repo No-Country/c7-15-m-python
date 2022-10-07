@@ -8,16 +8,16 @@ class UserCreationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['email', 'password', 'password2']
+        fields = ['id','username','last_name','email', 'password', 'password2']
         extra_kwargs = {
-            'password': { 'write_only': True}
+            'password': {'write_only': True}
         }
 
     def save(self):
         user = User(
             email=self.validated_data['email'],
         )
-        password = self.validated_data['password']
+        password = self.validated_data['password'],
         password2 = self.validated_data['password2']
 
         if password != password2:
@@ -26,3 +26,13 @@ class UserCreationSerializer(serializers.ModelSerializer):
         user.set_password(password)
         user.save()
         return user
+
+
+class UsersSerializers(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = ['id','email','username','genre', 'country','avatar','date_of_birth']
+
+
+   

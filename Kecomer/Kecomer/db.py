@@ -12,9 +12,6 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
 SQLITE = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

@@ -61,6 +61,7 @@ LOCAL_APPS = [
 THIRD_PARTY_APPS = [
     'rest_framework',
     'djoser',
+    'rest_framework_simplejwt',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
@@ -90,10 +91,31 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
     #https://django-rest-framework-simplejwt.readthedocs.io/en/latest/settings.html
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=45),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
+DJOSER = {
+    'PASSWORD_RESET_CONFIRM_URL': '#/password/reset/confirm/{uid}/{token}',
+    'USERNAME_RESET_CONFIRM_URL': '#/username/reset/confirm/{uid}/{token}',
+    'ACTIVATION_URL': '#/activate/{uid}/{token}',
+    'SEND_ACTIVATION_EMAIL': True,
+    'LOGIN_FIEDS': 'email',
+    'USER_CREATE_PASSWORD_RETYPE': True,
+    'USER_CHANGED_EMAIL_RETYPE': True,
+    'SEND_CONFIRMATION_EMAIL': True,
+    'SET_USERNAME_EMAIL':True,
+    'SET_PASSWORD_EMAIL':True,
+    'PASSWORD_RESET_CONFIRM_URL': 'passsword/reset/confirm/{uid},{token}',
+    'USERNAME_RESET_CONFIRM_URL': 'email/reset/confirm/{uid},{token}',
+    'ACTIVATION_URL': 'actite/{uid}/{token}',
+    'SEND_ACTIVATION_EMAIL': True,
+    'SERIALIZERS': {
+        'user_create': 'users.serializers.UserCreationSerializer',
+        'user': 'users.serializers.UserCreationSerializer',
+        'user_delete': 'djoser.serializers.UserDeleteSerializer',
+    },
+}
 
 TEMPLATES = [
     {
@@ -119,6 +141,16 @@ WSGI_APPLICATION = 'Kecomer.wsgi.application'
 
 DATABASES = db.POSTGRESQL
 
+
+EMAIL_CONFIGURE = {
+    'default': {
+        'EMAIL_HOSTING' : env('EMAIL_HOST'),
+        'EMAIL_PORT' : env('POSTGRESQL_PORT'),
+        'EMAIL_HOST_USER' : env('EMAIL_HOST_USER'),
+        'EMAIL_HOST_PASSWORD' : env('EMAIL_HOST_PASSWORD'),
+        'EMAIL_HOST_TLS' : True
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

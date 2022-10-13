@@ -23,13 +23,13 @@ $python manage.py runserver
 
 
 ## ROUTES TO IMPLEMENT
-| METHOD | ROUTE | FUNCTIONALITY |ACCESS|
-| ------- | ----- | ------------- | ------------- |
-| *POST* | ```/auth/signup/``` | _Register new user_| _All users_|
-| *POST* | ```/auth/jwt/create/``` | _Login user_|_All users_|
-| *POST* | ```/auth/jwt/refresh/``` | _Refresh the access token_|_All users_|
-| *POST* | ```/auth/jwt/verify/``` | _Verify the validity of a token_|_All users_|
-| *GET* | ```/api/user/``` | _All users_|_All users_|
-| *GET* | ```/api/user/{user_id}/``` | _Retrieve an user_|_All users_|
-| *PUT* | ```/api/user/{user_id}/``` | _Update an user_|_All users_|
+| METHOD | ROUTE                        | FUNCTIONALITY                    |ACCESS|
+|--------|------------------------------|----------------------------------| ------------- |
+| *POST* | ```/users/signup/```         | _Register new user_              | _All users_|
+| *POST* | ```/auth/jwt/create/```      | _Login user_                     |_All users_|
+| *POST* | ```/auth/jwt/refresh/```     | _Refresh the access token_       |_All users_|
+| *POST* | ```/auth/jwt/verify/```      | _Verify the validity of a token_ |_All users_|
+| *GET*  | ```/users/update/{id}/```    | _Retrieve an user_               |_All users_|
+| *PUT*  | ```/users/update/{id}/```    | _Update an user_                 |_All users_|
+| *GET*  | ```/recipes/recipes/``` | _List all recipe_                |_All users_|
 

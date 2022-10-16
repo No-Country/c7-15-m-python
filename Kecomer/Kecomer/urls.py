@@ -31,3 +31,8 @@ urlpatterns = [
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 
 ]
+
+urlpatterns += [
+    path('api/v1/', include('djoser.urls')),
+    
+]

@@ -44,11 +44,13 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 ]
 
 LOCAL_APPS = [
     'users',
     'recipes',
+    'accounts',
 ]
 
 THIRD_PARTY_APPS = [
@@ -56,7 +58,8 @@ THIRD_PARTY_APPS = [
     'rest_framework',
     'djoser',
     'drf_yasg',
-    
+    'rest_framework_simplejwt',
+
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -95,7 +98,7 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
     #https://django-rest-framework-simplejwt.readthedocs.io/en/latest/settings.html
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=45),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
@@ -108,12 +111,26 @@ SWAGGER_SETTINGS = {
       }
    }
 }
+SITE_ID = 1
+
+DJOSER = {
+    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
+    'PASSWORD_RESET_CONFIRM_RETYPE': True,
+    'EMAIL': {
+        'password_reset': 'accounts.email.PasswordResetEmail'
+    }
+}
+    
+
 
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR,
+            BASE_DIR.joinpath('templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,6 +151,13 @@ WSGI_APPLICATION = 'Kecomer.wsgi.application'
 
 DATABASES = db.DBONRENDER
 
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = env ('FROM_EMAIL')
+EMAIL_HOST= env('EMAIL_HOST')
+EMAIL_PORT = 587
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_TLS = True
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -170,18 +194,22 @@ USE_TZ = True
 
 
 
-STATIC_URL = '/static/'
-if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
+#if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
     # in your application directory on Render.
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+   # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Turn on WhiteNoise storage backend that takes care of compressing static files
     # and creating unique names for each version so they can safely be cached forever.
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    #
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = (BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")

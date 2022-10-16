@@ -31,7 +31,7 @@ class RecipesModel(models.Model):
         ('PA', 'Pastas')
     ]
     title=models.CharField(max_length=255, unique=True)
-    image=models.ImageField(upload_to="recipes/img", blank=True, null=True)
+    image=models.ImageField(upload_to="media/recipes/img", blank=True, null=True)
     link_video=models.CharField(max_length=255, blank=True, null=True)
     category=models.CharField(max_length=12, choices=category_choice)
     number_of_dishes=models.IntegerField()

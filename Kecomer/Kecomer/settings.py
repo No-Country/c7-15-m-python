@@ -75,6 +75,8 @@ MIDDLEWARE = [
 # permisoss para consumo de api
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3030',
+    'http://localhost:3000',
+    'http://localhost:8080',
     'http://localhost',
 ]
 

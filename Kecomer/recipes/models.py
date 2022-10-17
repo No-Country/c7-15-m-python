@@ -14,6 +14,30 @@ class Ingredients(models.Model):
         ordering = ['id']
 
 
+class InstructionModel(models.Model):
+    name = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'InstructionModel'
+        verbose_name_plural = 'InstructionModels'
+        ordering = ['id']
+
+
+class QuantityModel(models.Model):
+    name = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'QuantityModel'
+        verbose_name_plural = 'QuantityModels'
+        ordering = ['id']
+
+
 # Create your models here.
 class RecipesModel(models.Model):
     time_choice = [
@@ -33,6 +57,8 @@ class RecipesModel(models.Model):
     timeday= models.CharField(max_length=12,choices=time_choice, null=True, blank=True)
     recipes_time=models.IntegerField()
     ingredients=models.ManyToManyField(Ingredients)
+    quantity = models.ManyToManyField(QuantityModel)
+    instruction = models.ManyToManyField(InstructionModel)
     like=models.IntegerField(default=0, null=True, blank=True)
     description=models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)

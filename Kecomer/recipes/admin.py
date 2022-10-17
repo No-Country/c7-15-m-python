@@ -1,4 +1,4 @@
-from recipes.models import RecipesModel, Ingredients, Favorites
+from recipes.models import RecipesModel, Ingredients, Favorites, QuantityModel, InstructionModel
 from django.contrib import admin
 
 
@@ -9,6 +9,8 @@ class RecipesAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Ingredients)
+admin.site.register(QuantityModel)
+admin.site.register(InstructionModel)
 
 @admin.register(Favorites)
 class FavoritesAdmin(admin.ModelAdmin):

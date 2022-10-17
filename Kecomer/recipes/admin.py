@@ -8,9 +8,7 @@ class RecipesAdmin(admin.ModelAdmin):
     list_display= ['id','title','category','timeday']
 
 
-@admin.register(Ingredients)
-class IngredientsAdmin(admin.ModelAdmin):
-    list_display= ['id','dishe_1','dishe_2','dishe_3','dishe_4']
+admin.site.register(Ingredients)
 
 @admin.register(Favorites)
 class FavoritesAdmin(admin.ModelAdmin):

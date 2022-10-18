@@ -50,17 +50,26 @@ class RecipesModel(models.Model):
         ('CARNE', 'Carne'),
         ('POSTRE', 'Postre'),
     ]
+
+    difficulty_choice = [
+        ('Fácil', 'Fácil'),
+        ('Normal', 'Normal'),
+        ('Dificíl', 'Dificíl'),
+    ]
+
     title=models.CharField(max_length=255, unique=True)
     image=models.ImageField(upload_to="recipes/img", blank=True, null=True)
     link_video=models.CharField(max_length=255, blank=True, null=True)
     category=models.CharField(max_length=12, choices=category_choice)
-    timeday= models.CharField(max_length=12,choices=time_choice, null=True, blank=True)
+    timeday= models.CharField(max_length=12, choices=time_choice)
+    difficulty = models.CharField(max_length=10, choices=difficulty_choice)
     recipes_time=models.IntegerField()
     ingredients=models.ManyToManyField(Ingredients)
     quantity = models.ManyToManyField(QuantityModel)
     instruction = models.ManyToManyField(InstructionModel)
     like=models.IntegerField(default=0, null=True, blank=True)
     description=models.TextField(null=True, blank=True)
+    duration = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     

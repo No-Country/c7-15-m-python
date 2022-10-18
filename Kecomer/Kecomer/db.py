@@ -2,6 +2,7 @@ from pathlib import Path
 
 import environ
 import os
+import dj_database_url
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -12,9 +13,6 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
 SQLITE = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -23,14 +21,20 @@ SQLITE = {
 }
 
 
-POSTGRESQL = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env('POSTGRESQL_NAME'),
-        'USER': env('POSTGRESQL_USER'),
-        'PASSWORD': env('POSTGRESQL_PASS'),
-        'HOST': env('POSTGRESQL_HOST'),
-        'PORT': env('POSTGRESQL_PORT'),
-        'ATOMIC_REQUESTS': True
-    }
-}
+#POSTGRESQL = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': env('POSTGRESQL_NAME'),
+#        'USER': env('POSTGRESQL_USER'),
+#        'PASSWORD': env('POSTGRESQL_PASS'),
+#        'HOST': env('POSTGRESQL_HOST'),
+#        'PORT': env('POSTGRESQL_PORT'),
+#        'ATOMIC_REQUESTS': True
+#    }
+#}
+#configuracion para la nube
+DBONRENDER={
+        'default': dj_database_url.config(
+        default='sqlite:////db.sqlite3',
+        conn_max_age=600)
+        }

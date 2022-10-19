@@ -36,6 +36,8 @@ class UsersSerializers(serializers.ModelSerializer):
 
 class ResetPasswordEmailRequestSerializer(serializers.ModelSerializer):
 
+    password2 = serializers.CharField(style={'input_type'}, min_length=4, max_length=12, write_only=True)
+
     class Meta: 
         model = User
         fields = ["email", "password"]

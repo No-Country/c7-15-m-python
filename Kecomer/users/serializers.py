@@ -1,5 +1,10 @@
 from rest_framework import serializers
 from users.models import User
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    pass
 
 
 class UserCreationSerializer(serializers.ModelSerializer):
@@ -16,6 +21,8 @@ class UserCreationSerializer(serializers.ModelSerializer):
     def save(self):
         user = User(
             email=self.validated_data['email'],
+            username=self.validated_data['username'],
+            last_name=self.validated_data['last_name'],
         )
         password = self.validated_data['password']
         password2 = self.validated_data['password2']

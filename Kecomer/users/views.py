@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 from django.http import Http404
 
 from users.models import User
-from users.serializers import UserCreationSerializer, UsersSerializers
+from users.serializers import UserCreationSerializer, UsersSerializers, ResetPasswordEmailRequestSerializer
 from drf_yasg.utils import swagger_auto_schema
 
 
@@ -48,4 +48,11 @@ class UserDetailView(APIView):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+class RequestPasswordResetEmail(GenericAPIView):
+    serializer_class = ResetPasswordEmailRequestSerializer
+
+    def post(self, request):
+        serializer = self.serializer_class(data=request.data)
+        serializer.is_valid(raise_exception=True)
 

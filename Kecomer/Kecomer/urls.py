@@ -2,13 +2,15 @@ from django.contrib import admin
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from django.conf.urls.static import static
 
 from django.urls import path, include, re_path
 from django.views.static import serve
 
+from Kecomer import settings
 schema_view = get_schema_view(
    openapi.Info(
-      title="Kecomer API",
+      title="kecomer API",
       default_version='v1',
       description="Public documentation of API Kecomer",
       #terms_of_service="https://www.google.com/policies/terms/",

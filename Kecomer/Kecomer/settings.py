@@ -102,9 +102,19 @@ SIMPLE_JWT = {
 
 DJOSER = {
     'LOGIN_FIELD': 'email',
-    'PASSWRD_RESET_CONFIRM_URL': '#password/reset/confirm/{uid}/{token}',
+    'PASSWORD_RESET_CONFIRM_URL': '#password/reset/confirm/{uid}/{token}',
+    'USERNAME_RESET_CONFIRM_URL': '#/username-reset/{uid}/{token}',
+    'ACTIVATION_URL': '#/activate/{uid}/{token}',
     'USER_CREATE_PASSWORD_RETYPE': True,
     'SEND_ACTIVATION_EMAIL': True,
+    'SEND_CONFIRMATION_EMAI': True,
+    'PASSWORD_CHANGED_EMAIL_CONFIRMATION': True,
+    'SERIALIZERS': {
+        'activation': 'djoser.email.ActivationEmail',
+    'confirmation': 'djoser.email.ConfirmationEmail',
+    'password_reset': 'djoser.email.PasswordResetEmail',
+    'password_changed_confirmation': 'djoser.email.PasswordChangedConfirmationEmail',
+    },
 }
 
 SWAGGER_SETTINGS = {

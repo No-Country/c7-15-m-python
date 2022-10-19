@@ -36,13 +36,13 @@ class UsersSerializers(serializers.ModelSerializer):
 
 class ResetPasswordEmailRequestSerializer(serializers.ModelSerializer):
 
-    password2 = serializers.CharField(style={'input_type'}, min_length=4, max_length=12, write_only=True)
+    new_password = serializers.CharField(style={'input_type'}, min_length=4, max_length=12, write_only=True)
 
     class Meta: 
         model = User
-        fields = ["email", "password"]
+        fields = ["email", "password", "new_password"]
         extra_kwargs = {
-            'password': {'write_only': True}
+            'new_password': {'write_only': True}
         }
 
     def saveResetPassword(self):
@@ -50,9 +50,9 @@ class ResetPasswordEmailRequestSerializer(serializers.ModelSerializer):
             email=self.validated_data['email'],
         )
         password = self.validated_data['password']
-        password2 = self.validated_data['password2']
+        new_password = self.validated_data['password2']
 
-        if password != password2:
+        if password != new_password:
             raise serializers.ValidationError({'password': 'Passwords must match.'})
 
         user.set_password(password)

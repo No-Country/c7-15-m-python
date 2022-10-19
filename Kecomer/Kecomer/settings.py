@@ -54,6 +54,7 @@ LOCAL_APPS = [
 THIRD_PARTY_APPS = [
     'corsheaders',
     'rest_framework',
+    'rest_framework_simplejwt',
     'djoser',
     'drf_yasg',
 ]
@@ -93,10 +94,14 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'AUTH_HEADER_TYPES': ('Bearer',),
+    # 'AUTH_HEADER_TYPES': ('Bearer',),
     #https://django-rest-framework-simplejwt.readthedocs.io/en/latest/settings.html
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+}
+
+DJOSER = {
+    'LOGIN_FIELD': 'email'
 }
 
 SWAGGER_SETTINGS = {

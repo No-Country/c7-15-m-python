@@ -6,8 +6,8 @@ Maquetado de la pagina de KECOMER, donde se podrá:
 
 - Registrarse/Loguearse.
 - Ver recetas.
-- Buscar por medio de filtros.
-- Historicos.
+- Buscar recetas ingresando ingredientes.
+- Guardar recetas favoritas.
 - Perfil.
 
 ## :speaking_head: Desarrolladores del proyecto

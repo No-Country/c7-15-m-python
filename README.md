@@ -11,9 +11,20 @@ Maquetado de la pagina de KECOMER, donde se podrá:
 - Perfil.
 
 ## :speaking_head: Desarrolladores del proyecto
-
-- [Nombre](https://linkedin.com) - Frontend, Mockup
-- [nombre](https://linkedin.com) - Frontend, Mockup
+### :crossed_swords: FrontEnd
+#### [Emanuel Tevez](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/)
+#### [Francisco Santos](www.linkedin.com/in/francisco-santos-a6973a1ab)
+#### [Federico Lumma](www.linkedin.com/in/federico-lumma)
+### :shield: UX-UI
+#### [Matías Celaye](https://www.linkedin.com/in/matiascelaye/)
+#### [Santiago Basualdo](https://www.linkedin.com/in/santiagocortez-ui/)
+### :gear: Tester
+#### [Osbely Lugo](www.linkedin.com/in/osbely-lugo)
+#### [Daniela Perez](https://www.linkedin.com/in/daniela-perez-qa/)
+### :link: BackEnd
+#### [Elías Galeano](https://www.linkedin.com/in/elias-david-galeano)
+#### [Marvin Achas	Back-End](https://www.linkedin.com/in/marvin-joel/)
+#### [Fabian Di Paolo](https://www.linkedin.com/in/fabian-di-paolo/)
 
 
 ## :computer: Tecnologías utilizadas

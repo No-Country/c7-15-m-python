@@ -1,51 +1,73 @@
-# Ke Comer
+<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://user-images.githubusercontent.com/22551090/196989057-d7da8c4a-57fa-44ab-a4d2-b7c1b83f0162.png" alt="Ke comer logo"></a></p>
 
 ### Proyecto realizado por el grupo C7-15-M
+#-----------------------------------
+##Descripción del proyecto
+....
+....
+...
+...
+..
+...
 
-Maquetado de la pagina de KECOMER, donde se podrá:
+##  *Instalación de proyecto* - FRONT END
+...
+.
+.
+.
+## *Instalación de proyecto* - Back-End
+### Cómo ejecutar el proyecto
+- Instalar Postgresql
+- Instalar Python
+- Clonar el proyecto con ``` git clone git@github.com:No-Country/c7-15-m-python.git```
+- Crear entorno virtual con `Pipenv` or `virtualenv` and activate it.
+- Instalar los requerimientos
+```sh
+    pip install -r requirements.txt
+```
+- Ejecutar las migraciones
+```sh
+    python manage.py migrate
+```
+- Ejecutar el proyecto
+```sh
+    python manage.py runserver
+```
+## *Precentación de proyecto*
+### _url de proyecto_ ---->
 
-- Registrarse/Loguearse.
-- Ver recetas.
-- Buscar recetas ingresando ingredientes.
-- Guardar recetas favoritas.
-- Perfil.
-
-## :speaking_head: Desarrolladores del proyecto
-### :crossed_swords: FrontEnd
-#### [Emanuel Tevez](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/)
-#### [Francisco Santos](www.linkedin.com/in/francisco-santos-a6973a1ab)
-#### [Federico Lumma](www.linkedin.com/in/federico-lumma)
-### :shield: UX-UI
-#### [Matías Celaye](https://www.linkedin.com/in/matiascelaye/)
-#### [Santiago Basualdo](https://www.linkedin.com/in/santiagocortez-ui/)
-### :gear: Tester
-#### [Osbely Lugo](www.linkedin.com/in/osbely-lugo)
-#### [Daniela Perez](https://www.linkedin.com/in/daniela-perez-qa/)
-### :link: BackEnd
-#### [Elías Galeano](https://www.linkedin.com/in/elias-david-galeano)
-#### [Marvin Achas	Back-End](https://www.linkedin.com/in/marvin-joel/)
-#### [Fabian Di Paolo](https://www.linkedin.com/in/fabian-di-paolo/)
+colocar foto
 
 
-## :computer: Tecnologías utilizadas
-<div style="display:grid;grid-template-columns: repeat(4, 1fr);gap:4rem;place-content:center;place-items:center">
-<img alt="html5" width= "30px" align="left" src= "https://cdn-icons-png.flaticon.com/128/1051/1051277.png" />
-<img alt="css3" width= "30px" align="left" src= "https://cdn-icons-png.flaticon.com/128/732/732190.png" />
-<img alt="javascript" width= "30px" align="left" src= "https://cdn.icon-icons.com/icons2/2108/PNG/512/javascript_icon_130900.png" />
-<img alt="javascript" width= "30px" align="left" src= "https://raw.githubusercontent.com/themedotid/bootstrap-icon/HEAD/docs/bootstrap-icon-css.png" />
-<img alt="javascript" width= "30px" align="left" src= "https://avatars.githubusercontent.com/u/1134463?v=4" />
-<img alt="javascript" width= "30px" align="left" src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXL2L5LWSonB-AZD4D_5GxZBbew3jbUoZ9yVN8fFBttOXljVlGA3SnGm5pVY2s9DK4tv0&usqp=CAU" />
-<img alt="react" width= "30px" align="left" src= "https://user-images.githubusercontent.com/70983593/196929537-4ab0cb22-cb4b-46e6-a516-f369ade3e7d8.png" />
-<img alt="python" width= "30px" align="left" src= "https://user-images.githubusercontent.com/70983593/196929882-908b3275-f67d-420f-aeb1-ba3df7118e80.png" />
-</div>
 
-## Link deploy
 
-[imagen de ke comer](https://link a app/)
 
-<img src="Client\public\No Country Banner.png" height=100 width=1280>.
 
-BACKEND : https://xxxxxxxx.herokuapp.com/
-FRONTEND: https://xxxxxxxxxx.netitly.app/
+<h2> 🚀 &nbsp;Tecnologías utilizadas</h2>
+<p align="left">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original-wordmark.svg" alt="python" width="45" height="45" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="45" height="45" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="45" height="45" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="45" height="45"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain.svg" alt="bootstrap" width="45" height="45" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="45" height="45" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="45" height="45" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="45" height="45" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="linux" width="45" height="45"/>       
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git" width="45" height="45"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="figma" width="45" height="45"/>   
+<img src="https://user-images.githubusercontent.com/22551090/197005289-270efd3d-cfa4-4f37-ad00-656d4b264788.png" alt="figma" width="45" height="45"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="45" height="45"/>
 
-## :framed_picture: Capturas
+</p>
+
+### Desarrolladores del proyecto
+### Tester
+#### [Osbely Lugo](www.linkedin.com/in/osbely-lugo) | [Daniela Perez](https://www.linkedin.com/in/daniela-perez-qa/)
+### FrontEnd
+#### [Emanuel Tevez](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/) | [Francisco Santos](www.linkedin.com/in/francisco-santos-a6973a1ab) | [Federico Lumma](www.linkedin.com/in/federico-lumma)
+###  UX-UI
+#### [Matías Celaye](https://www.linkedin.com/in/matiascelaye/) | [Santiago Basualdo](https://www.linkedin.com/in/santiagocortez-ui/)
+### BackEnd
+#### [Elías Galeano](https://www.linkedin.com/in/elias-david-galeano)  | [Fabian Di Paolo](https://www.linkedin.com/in/fabian-di-paolo/) | [Marvin Achas	Back-End](https://www.linkedin.com/in/marvin-joel/)
+

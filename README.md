@@ -1,7 +1,7 @@
 <p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://user-images.githubusercontent.com/22551090/196989057-d7da8c4a-57fa-44ab-a4d2-b7c1b83f0162.png" alt="Ke comer logo"></a></p>
 
 ### Proyecto realizado por el grupo C7-15-M
-#-----------------------------------
+
 ##Descripción del proyecto
 ....
 ....
@@ -42,6 +42,7 @@ colocar foto
 
 
 
+<br>  
 
 <h2> 🚀 &nbsp;Tecnologías utilizadas</h2>
 <p align="left">
@@ -58,10 +59,10 @@ colocar foto
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="figma" width="45" height="45"/>   
 <img src="https://user-images.githubusercontent.com/22551090/197005289-270efd3d-cfa4-4f37-ad00-656d4b264788.png" alt="figma" width="45" height="45"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="45" height="45"/>
-
 </p>
+<br>
 
-### Desarrolladores del proyecto
+## Desarrolladores del proyecto:
 ### Tester
 #### [Osbely Lugo](www.linkedin.com/in/osbely-lugo) | [Daniela Perez](https://www.linkedin.com/in/daniela-perez-qa/)
 ### FrontEnd

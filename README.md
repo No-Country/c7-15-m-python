@@ -1,20 +1,12 @@
-<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100%" src="https://user-images.githubusercontent.com/22551090/196989057-d7da8c4a-57fa-44ab-a4d2-b7c1b83f0162.png" alt="Ke comer logo"></a></p>
+<p align="center"><a href="https://kcomer.netlify.app/" target="_blank" rel="noopener noreferrer"><img width="100%" src="https://user-images.githubusercontent.com/22551090/196989057-d7da8c4a-57fa-44ab-a4d2-b7c1b83f0162.png" alt="Ke comer logo"></a></p>
 
 ### Proyecto realizado por el grupo C7-15-M
 
 ##Descripción del proyecto
-....
-....
-...
-...
-..
-...
+
 
 ##  *Instalación de proyecto* - FRONT END
-...
-.
-.
-.
+
 ## *Instalación de proyecto* - Back-End
 ### Cómo ejecutar el proyecto
 - Instalar Postgresql
@@ -34,9 +26,9 @@
     python manage.py runserver
 ```
 ## *Precentación de proyecto*
-### _url de proyecto_ ---->
+##<p align="center"><a href="https://kcomer.netlify.app/" target="_blank" rel="noopener noreferrer">KeComer</a></p>
 
-colocar foto
+<p align="center"><a href="https://kcomer.netlify.app/" target="_blank" rel="noopener noreferrer"><img width="100%" src="https://user-images.githubusercontent.com/22551090/197208797-5d0fc71e-0f23-4c04-bff6-c3f44d508d69.png" alt="Ke comer logo"></a></p>
 
 
 
@@ -46,7 +38,7 @@ colocar foto
 
 <h2> 🚀 &nbsp;Tecnologías utilizadas</h2>
 <p align="left">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original-wordmark.svg" alt="python" width="45" height="45" />
+
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="45" height="45" />
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="45" height="45"/>

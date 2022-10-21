@@ -1,4 +1,4 @@
-<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://user-images.githubusercontent.com/22551090/196989057-d7da8c4a-57fa-44ab-a4d2-b7c1b83f0162.png" alt="Ke comer logo"></a></p>
+<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100%" src="https://user-images.githubusercontent.com/22551090/196989057-d7da8c4a-57fa-44ab-a4d2-b7c1b83f0162.png" alt="Ke comer logo"></a></p>
 
 ### Proyecto realizado por el grupo C7-15-M
 

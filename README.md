@@ -25,7 +25,7 @@
 ```sh
     python manage.py runserver
 ```
-## *Precentación de proyecto*
+## *Presentación de proyecto*
 ##<p align="center"><a href="https://kcomer.netlify.app/" target="_blank" rel="noopener noreferrer">KeComer</a></p>
 
 <p align="center"><a href="https://kcomer.netlify.app/" target="_blank" rel="noopener noreferrer"><img width="100%" src="https://user-images.githubusercontent.com/22551090/197208797-5d0fc71e-0f23-4c04-bff6-c3f44d508d69.png" alt="Ke comer logo"></a></p>

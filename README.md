@@ -63,10 +63,14 @@
 ## Desarrolladores del proyecto:
 ### Tester
 #### [Osbely Lugo](www.linkedin.com/in/osbely-lugo) | [Daniela Perez](https://www.linkedin.com/in/daniela-perez-qa/)
+
 ### FrontEnd
 #### [Emanuel Tevez](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/) | [Francisco Santos](www.linkedin.com/in/francisco-santos-a6973a1ab) | [Federico Lumma](www.linkedin.com/in/federico-lumma)
+
 ###  UX-UI
 #### [Matías Celaye](https://www.linkedin.com/in/matiascelaye/) | [Santiago Basualdo](https://www.linkedin.com/in/santiagocortez-ui/)
+
 ### BackEnd
 #### [Elías Galeano](https://www.linkedin.com/in/elias-david-galeano)  | [Fabian Di Paolo](https://www.linkedin.com/in/fabian-di-paolo/) | [Marvin Achas	Back-End](https://www.linkedin.com/in/marvin-joel/)
-
+| [<img src="https://user-images.githubusercontent.com/22551090/197237446-3fd10983-9768-45f2-b85b-53c600575aef.png" width=50><br><sub>Elías Galeano</sub>](https://github.com/galeanoelias) | [<img src="https://user-images.githubusercontent.com/22551090/197237747-4dec5b24-4df1-4f8f-8ec4-bc9b7a727c06.png" width=50><br><sub>Fabian Di Paolo</sub>](https://github.com/Hamerzin)  | [<img src="https://user-images.githubusercontent.com/22551090/197236022-56ea790a-e50e-44fc-897c-d25e622ff3b4.jpg" width=50><br><sub>Marvin Achas</sub>](https://github.com/marvinjoel) | 
+|:----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:| :---: |

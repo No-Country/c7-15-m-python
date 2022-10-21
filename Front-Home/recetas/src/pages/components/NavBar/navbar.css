@@ -1,0 +1,17 @@
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+ h3{
+    text-decoration: none !important;
+}
+.btns {
+    display: flex;
+    flex-direction: row;
+}
+.btns .btn-link{
+    text-decoration: none;
+    margin: 0 5px;
+}
